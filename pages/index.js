@@ -1,6 +1,6 @@
 const titles = {
   left: ['Võ Ngọc Bảo', 'Đã lưu', 'Bạn bè', 'Kỷ niệm', 'Nhóm', 'Video'],
-  right: ['Hồ Văn Kiệt', 'Lê Minh Hoàng', 'Trần Thanh', 'Kiều Thị Khánh Ly', 'Diễm Quỳnh', 'Hồ Duy Hải', 'Trần Nguyễn Ngọc Tiến', 'Phan Thi Kim Tien', 'Huy Tín', 'Trịnh Xuân Hoà', 'Phương Nga', 'Phạm Quang Huy', 'Nguyễn Duy Đoan', 'Nguyễn Trung Hiếu', 'Phạm Tấn Thật']
+  right: ['Hồ Văn Kiệt', 'Lê Minh Hoàng', 'Trần Thanh', 'Nguyễn Văn Hoàng', 'Kiều Thị Khánh Ly', 'Diễm Quỳnh', 'Hồ Duy Hải', 'Trần Nguyễn Ngọc Tiến', 'Phan Thi Kim Tien', 'Huy Tín', 'Trịnh Xuân Hoà', 'Phương Nga', 'Phạm Quang Huy', 'Nguyễn Duy Đoan', 'Nguyễn Trung Hiếu', 'Phạm Tấn Thật']
 };
 export default function Home() {
   return (
@@ -18,6 +18,13 @@ export default function Home() {
         </div>
       </div>
       <div className="col-span-6 flex flex-col p-5 max-lg:col-span-12 gap-5">
+        <div className="flex flex-col w-full border-solid border-2 shadow-lg rounded-lg p-5 gap-3">
+          <div className="flex items-center gap-3">
+            <img className="rounded-full" src="SmallAvatar.jpg" width={"36px"} height={"36px"} />
+            <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Bảo ơi, bạn đang nghỉ gì thế..." required />
+          </div>
+          <hr />
+        </div>
         {[...Array(10)].map(index => {
           return (
             <div key={crypto.randomUUID()} className="flex flex-col w-full border-solid border-2 shadow-lg rounded-lg">
@@ -35,7 +42,7 @@ export default function Home() {
               </div>
               <hr />
               <div className="flex flex-col p-2 gap-3 w-full justify-center">
-                <div className="flex justify-between gap-5">
+                <div className="flex justify-between gap-5 mx-5">
                   <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold h-10 px-5 rounded">
                     Like
                   </button>
@@ -54,7 +61,7 @@ export default function Home() {
         })}
       </div>
       <div className="col-span-3">
-        <div className="fixed flex flex-col p-5 rounded gap-3 max-lg:hidden overflow-auto h-5/6">
+        <div className="fixed end-3 flex flex-col p-5 rounded gap-3 max-lg:hidden overflow-auto h-5/6">
           {titles.right.map(title => {
             return (
               <div key={crypto.randomUUID()} className="flex items-center gap-3">
