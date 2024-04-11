@@ -1,13 +1,17 @@
+const titles = {
+  left: ['Võ Ngọc Bảo', 'Đã lưu', 'Bạn bè', 'Kỷ niệm', 'Nhóm', 'Video'],
+  right: ['Hồ Văn Kiệt', 'Lê Minh Hoàng', 'Trần Thanh', 'Kiều Thị Khánh Ly', 'Diễm Quỳnh', 'Hồ Duy Hải', 'Trần Nguyễn Ngọc Tiến', 'Phan Thi Kim Tien', 'Huy Tín', 'Trịnh Xuân Hoà', 'Phương Nga', 'Phạm Quang Huy', 'Nguyễn Duy Đoan', 'Nguyễn Trung Hiếu', 'Phạm Tấn Thật']
+};
 export default function Home() {
   return (
     <div className="grid grid-cols-12 gap-4 max-md:grid-cols-1">
       <div className="col-span-3">
         <div className="fixed flex flex-col p-5 rounded gap-3 max-lg:hidden">
-          {[...Array(10)].map(index => {
+          {titles.left.map(title => {
             return (
               <div key={crypto.randomUUID()} className="flex items-center gap-3">
                 <img className="rounded-full" src="SmallAvatar.jpg" width={"36px"} height={"36px"} />
-                <a>Võ Ngọc Bảo</a>
+                <strong>{title}</strong>
               </div>
             );
           })}
@@ -50,12 +54,12 @@ export default function Home() {
         })}
       </div>
       <div className="col-span-3">
-        <div className="fixed flex flex-col p-5 rounded gap-3 max-lg:hidden">
-          {[...Array(10)].map(index => {
+        <div className="fixed flex flex-col p-5 rounded gap-3 max-lg:hidden overflow-auto h-5/6">
+          {titles.right.map(title => {
             return (
               <div key={crypto.randomUUID()} className="flex items-center gap-3">
                 <img className="rounded-full" src="SmallAvatar.jpg" width={"36px"} height={"36px"} />
-                <a>Võ Ngọc Bảo</a>
+                <strong>{title}</strong>
               </div>
             );
           })}
