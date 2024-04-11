@@ -1,15 +1,17 @@
 export default function Home() {
   return (
     <div className="grid grid-cols-12 gap-4 max-md:grid-cols-1">
-      <div className="col-span-3 flex flex-col p-5 rounded gap-3 max-lg:hidden">
-        {[...Array(10)].map(index => {
-          return (
-            <div key={crypto.randomUUID()} className="flex items-center gap-3">
-              <img className="rounded-full" src="SmallAvatar.jpg" width={"36px"} height={"36px"} />
-              <a>Võ Ngọc Bảo</a>
-            </div>
-          );
-        })}
+      <div className="col-span-3">
+        <div className="fixed flex flex-col p-5 rounded gap-3 max-lg:hidden">
+          {[...Array(10)].map(index => {
+            return (
+              <div key={crypto.randomUUID()} className="flex items-center gap-3">
+                <img className="rounded-full" src="SmallAvatar.jpg" width={"36px"} height={"36px"} />
+                <a>Võ Ngọc Bảo</a>
+              </div>
+            );
+          })}
+        </div>
       </div>
       <div className="col-span-6 flex flex-col p-5 max-lg:col-span-12 gap-5">
         {[...Array(10)].map(index => {
@@ -30,32 +32,34 @@ export default function Home() {
               <hr />
               <div className="flex flex-col p-2 gap-3 w-full justify-center">
                 <div className="flex justify-between gap-5">
-                  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded">
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold h-10 px-5 rounded">
                     Like
                   </button>
-                  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded">
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold h-10 px-5 rounded">
                     Comment
                   </button>
-                  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded">
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold h-10 px-5 rounded">
                     Share
                   </button>
                 </div>
                 <hr />
-                <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Bình luận" required />
+                <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Bình luận" required />
               </div>
             </div>
           );
         })}
       </div>
-      <div className="col-span-3 flex flex-col p-5 rounded gap-3 max-lg:hidden">
-        {[...Array(10)].map(index => {
-          return (
-            <div key={crypto.randomUUID()} className="flex items-center gap-3">
-              <img className="rounded-full" src="SmallAvatar.jpg" width={"36px"} height={"36px"} />
-              <a>Võ Ngọc Bảo</a>
-            </div>
-          );
-        })}
+      <div className="col-span-3">
+        <div className="fixed flex flex-col p-5 rounded gap-3 max-lg:hidden">
+          {[...Array(10)].map(index => {
+            return (
+              <div key={crypto.randomUUID()} className="flex items-center gap-3">
+                <img className="rounded-full" src="SmallAvatar.jpg" width={"36px"} height={"36px"} />
+                <a>Võ Ngọc Bảo</a>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
