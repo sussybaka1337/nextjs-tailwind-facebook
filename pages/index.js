@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 const titles = {
   left: ['Võ Ngọc Bảo', 'Đã lưu', 'Bạn bè', 'Kỷ niệm', 'Nhóm', 'Video'],
   right: ['Hồ Văn Kiệt', 'Lê Minh Hoàng', 'Trần Thanh', 'Nguyễn Văn Hoàng', 'Kiều Thị Khánh Ly', 'Diễm Quỳnh', 'Hồ Duy Hải', 'Trần Nguyễn Ngọc Tiến', 'Phan Thi Kim Tien', 'Huy Tín', 'Trịnh Xuân Hoà', 'Phương Nga', 'Phạm Quang Huy', 'Nguyễn Duy Đoan', 'Nguyễn Trung Hiếu', 'Phạm Tấn Thật']
@@ -5,6 +7,9 @@ const titles = {
 export default function Home() {
   return (
     <div className="grid grid-cols-12 gap-4 max-md:grid-cols-1">
+      <Head>
+        <title>Homepage</title>
+      </Head>
       <div className="col-span-3">
         <div className="fixed flex flex-col p-5 rounded gap-3 max-lg:hidden">
           {titles.left.map(title => {
@@ -21,7 +26,7 @@ export default function Home() {
         <div className="flex flex-col w-full border-solid border-2 shadow-lg rounded-lg p-5 gap-3">
           <div className="flex items-center gap-3">
             <img className="rounded-full" src="SmallAvatar.jpg" width={"36px"} height={"36px"} />
-            <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Bảo ơi, bạn đang nghỉ gì thế..." required />
+            <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Bảo ơi, bạn đang nghĩ gì thế?" required />
           </div>
           <hr />
         </div>
