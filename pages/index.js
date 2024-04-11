@@ -61,7 +61,7 @@ export default function Home() {
         })}
       </div>
       <div className="col-span-3">
-        <div className="fixed end-3 flex flex-col p-5 rounded gap-3 max-lg:hidden overflow-auto h-5/6">
+        <div className="fixed end-3 flex flex-col p-5 rounded gap-3 max-lg:hidden overflow-auto h-5/6 scrollbar">
           {titles.right.map(title => {
             return (
               <div key={crypto.randomUUID()} className="flex items-center gap-3">
